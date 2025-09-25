@@ -45,7 +45,7 @@ public class SinDemo {
             v = v + postive * (Math.pow(x, i) / factorial(i));
             postive = postive * -1;
         }
-
+        assert (Math.abs(v-x)<0.1);
         return v;
     }
 
@@ -58,6 +58,7 @@ public class SinDemo {
         for (int i = 1; i <= s; i++) {
             r = r * i;
         }
+        assert (r >= s);
         return r;
     }
 }
