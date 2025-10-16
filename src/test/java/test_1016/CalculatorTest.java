@@ -1,5 +1,6 @@
 package test_1016;
 
+import org.checkerframework.checker.units.qual.C;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -7,20 +8,23 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class CalculatorTest {
+    Calculator calculator;
     @BeforeEach
     void init(){
+        calculator = new Calculator();
         System.out.println("Before Each");
     }
 
     @AfterEach
     void tearDown(){
         System.out.println("After Each");
+        calculator = null; // 釋放資源
     }
 
     @Test
     void add() {
 
-        Calculator calculator = new Calculator();
+//        Calculator calculator = new Calculator();
 //        System.out.println("pp");
 //        assertEquals(2, calculator.add(1, 2));
 //        System.out.println("pn");
